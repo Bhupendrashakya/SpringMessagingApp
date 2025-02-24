@@ -13,5 +13,9 @@ public class HelloRestController {
         return "Hello From BridgeLabz!!!";
     }
 
-
+    // curl localhost:8080/hello/param/Mark -w "\n"
+    @GetMapping("/param/{name}")
+    public String sayHelloTo(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz!";
+    }
 }
