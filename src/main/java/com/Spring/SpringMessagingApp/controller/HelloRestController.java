@@ -13,5 +13,12 @@ public class HelloRestController {
         return "Hello From BridgeLabz!!!";
     }
 
+    // curl localhost:8080/hello/query?name=Mark -w "\n"
+    @GetMapping("/query")
+    public String sayHello(@RequestParam(value = "name", defaultValue = "User") String name) {
+        return "Hello " + name + " from BridgeLabz!";
+    }
+
+
 
 }
